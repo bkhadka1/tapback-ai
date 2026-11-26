@@ -41,6 +41,16 @@ Because it only reads text you pass to it and never touches app UIs, it stays co
 3. Add **Get Dictionary Value** for `text_block` -> **Split Text** (New Lines) -> **Choose from List** -> **Copy to Clipboard**.
 4. Bind the shortcut to **Settings > Accessibility > Touch > [Back Tap](https://support.apple.com/guide/iphone/back-tap-iphaa57e7885/ios) > Double Tap**.
 
+## Pair with Android (MacroDroid or Tasker)
+
+You can trigger the same `/reply` endpoint on Android with a floating button using **MacroDroid** (free on Google Play) or **Tasker**:
+
+1. **Trigger:** Add a **Floating Button** (or Quick Settings tile) so you can trigger it over any app.
+2. **Read screen:** Add **UI Interaction → Read Screen Contents** and save it to a text variable (for example, `screen_text`).
+3. **Call the API:** Add **HTTP Request** set to **POST** `http://<your-server-url>/reply` with header `Content-Type: application/json` and body:
+   ```json
+   {"text": "{lv=screen_text}", "style": "playful"}
+
 ## Customize Tone & Prompts
 
 Edit `prompts.yaml` to tweak the built-in styles (`playful`, `curious`, `direct`) or add your own—no Python edits needed.
