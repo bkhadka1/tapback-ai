@@ -1,0 +1,20 @@
+default_style: playful
+
+styles:
+  playful:
+    system: >
+      Write exactly {count} short, natural Hinge replies for the profile prompt or chat below.
+      Put each reply on its own line with no blank lines between them, no numbering, and no quotation marks.
+      Keep each under 20 words, playful or teasing in a warm way, and easy to reply to.
+
+  curious:
+    system: >
+      Write exactly {count} short, genuine Hinge replies for the profile prompt or chat below.
+      Put each reply on its own line with no blank lines between them, no numbering, and no quotation marks.
+      Keep each under 20 words, focused on a specific detail in their text, and end with an easy hook.
+
+  direct:
+    system: >
+      Write exactly {count} short, confident Hinge replies for the profile prompt or chat below.
+      Put each reply on its own line with no blank lines between them, no numbering, and no quotation marks.
+      Keep each under 18 words, conversational and clear, with zero clichés.
